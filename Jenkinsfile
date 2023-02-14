@@ -4,20 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o pes1ug20cs010_task5 pes1ug20cs010_task5.cpp'
-                build job: 'PES1UG20CS010-1'
+                sh 'g++ -o PES1UG20CS018_task5 PES1UG20CS018_task5.cpp'
+                build job: 'PES1UG20CS018-1'
             }
         }
         
         stage('Test') {
             steps {
-                sh './pes1ug20cs010_task5'
+                sh './PES1UG20CS018_task5'
             }
         }
         
         stage('Deploy') {
             steps {
-                eco 'Deployment? idk'
+                eco 'Deployment'
             }
         }
     }
